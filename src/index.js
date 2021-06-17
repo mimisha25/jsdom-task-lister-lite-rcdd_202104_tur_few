@@ -1,24 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
-  const form = document.getElementById("create-task-form");
-   const list = document.getElementById("tasks");
-   const item = document.getElementById("new-task-description");
-   const removeTaks = document.getElementById("removeTask");
+  const form = document.querySelector('form');
 
-   form.addEventListener("submit", (e)=>{
-     e.preventDefault();
-     const newItem = document.createElement("li");
-     newItem.innerHTML = item.value;
-     list.append(newItem);
+   form.addEventListener('submit', function(event){
+     event.preventDefault();
+
+     let inputTag = document.querySelector('input#new-task-description');
+     let inputValue = inputTag.value;
+
+
+     let newLi = document.createElement('li');
+     newLi.innerText = inputValue;
+
+     let ulTag = document.querySelector('ul#tasks');
+     ulTag.append(newLi);
+     inputTag.value = '';
+
    })
-   removeTaks.addEventListener("submit", function(e){
-       const li = document.querySelectorAll();
-       for (let i = 0; i < li.length; i++){
-         if (item.value === li[i].innerHTML){
-           list.removeChild(li[i]);
-         }
-       }
-       e.preventDefault();
-     });
-
-   });
+ });
