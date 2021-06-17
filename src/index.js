@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
 
-
-
-  let input = document.getElementById("new-task-description");
+let input = document.getElementById("new-task-description");
  let button = document.getElementById("btnId");
  let toDos = document.getElementById("tasks");
 
