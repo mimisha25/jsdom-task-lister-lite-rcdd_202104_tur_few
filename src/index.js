@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
   const form = document.getElementById("create-task-form");
-   const item = document.getElementById("new-task-description");
    const list = document.getElementById("tasks");
+   const item = document.getElementById("new-task-description");
    const removeTaks = document.getElementById("removeTask");
 
    form.addEventListener("submit", (e)=>{
